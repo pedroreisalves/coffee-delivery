@@ -1,4 +1,11 @@
-import { IsNumber, IsString, IsUrl, Min, MinLength } from 'class-validator';
+import {
+  IsNumber,
+  IsOptional,
+  IsString,
+  IsUrl,
+  Min,
+  MinLength,
+} from 'class-validator';
 
 export class CreateProductDto {
   @IsUrl()
@@ -20,5 +27,6 @@ export class CreateProductDto {
   value: number;
 
   @IsNumber()
+  @IsOptional()
   categoryId: number;
 }
