@@ -19,6 +19,7 @@ model User {
   postalCode            String
   role                  Role
   additionalInformation String?
+  houseNumber           Int
   sales                 Sale[]
 }
 

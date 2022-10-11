@@ -3,9 +3,11 @@ import {
   IsByteLength,
   IsEmail,
   IsEnum,
+  IsNumber,
   IsOptional,
   IsPostalCode,
   IsString,
+  Min,
   MinLength,
 } from 'class-validator';
 
@@ -32,6 +34,10 @@ export class CreateUserDto {
 
   @IsPostalCode('BR')
   postalCode: string;
+
+  @IsNumber()
+  @Min(1)
+  houseNumber: number;
 
   @IsString()
   @IsOptional()
