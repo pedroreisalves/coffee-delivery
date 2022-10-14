@@ -9,10 +9,12 @@ import {
   UseGuards,
 } from '@nestjs/common';
 import { AuthGuard } from '@nestjs/passport';
+import { ApiTags } from '@nestjs/swagger';
 import { CategoriesService } from './categories.service';
 import { CreateCategoryDto } from './dto/create-category.dto';
 import { UpdateCategoryDto } from './dto/update-category.dto';
 
+@ApiTags('Categories')
 @Controller('categories')
 @UseGuards(AuthGuard('jwt'))
 export class CategoriesController {

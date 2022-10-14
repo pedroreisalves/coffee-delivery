@@ -7,10 +7,18 @@ import { BadRequestInterceptor } from './common/errors/interceptors/bad-request.
 import { ConflictInterceptor } from './common/errors/interceptors/conflict.interceptor';
 import { NotFoundInterceptor } from './common/errors/interceptors/not-found.interceptor';
 import { UnauthorizedInterceptor } from './common/errors/interceptors/unathorized.interceptor';
+import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 
 async function bootstrap() {
   const PORT = process.env.PORT;
   const app = await NestFactory.create(AppModule, { cors: true });
+  const config = new DocumentBuilder()
+    .setTitle('Coffee Delivery')
+    .setDescription('Coffee Delivery - REST API')
+    .setVersion('1.0')
+    .build();
+  const document = SwaggerModule.createDocument(app, config);
+  SwaggerModule.setup('documentation', app, document);
   app.useGlobalPipes(
     new ValidationPipe({
       whitelist: true,

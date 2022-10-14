@@ -12,7 +12,9 @@ import {
 import { SalesService } from './sales.service';
 import { CreateSaleDto } from './dto/create-sale.dto';
 import { UpdateSaleDto } from './dto/update-sale.dto';
+import { ApiTags } from '@nestjs/swagger';
 
+@ApiTags('Sales')
 @Controller('sales')
 @UseGuards(AuthGuard('jwt'))
 export class SalesController {
