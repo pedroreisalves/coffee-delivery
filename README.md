@@ -8,6 +8,7 @@ This project is a REST API created to manage the platform of an online coffee st
 docker-compose up -d
 ```
 ### Built with:
+- [Docker](https://www.docker.com/)
 - [Node.js](https://nodejs.org/en/)
 - [Typescript](https://www.typescriptlang.org/)
 - [NestJS](https://nestjs.com/)
