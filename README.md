@@ -13,6 +13,7 @@ docker-compose up -d
 - [NestJS](https://nestjs.com/)
 - [PostgreSQL](https://www.postgresql.org/)
 - [Prisma](https://www.prisma.io/)
+- [Swagger](https://swagger.io/)
 - [JWT Auth](https://jwt.io/)
 ### Developed by:
 - [Pedro Reis](https://www.linkedin.com/in/pedroreisalves/)
